@@ -1,5 +1,13 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Home - Anoty",
@@ -8,16 +16,99 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main className="h-full w-full flex items-center justify-center flex-col">
-      <div className="text-center space-y-4">
+    <main className="h-full w-full flex  flex-col">
+      <div className="text-center container mx-auto space-y-4 m-12">
         <div>
-          <h1 className="text-3xl">Crie anotações incríveis</h1>
-          <p className="text-sm text-muted-foreground">
-            Guarde todas as suas anotações em uma única plataforma
+          <h1 className="text-4xl lg:text-9xl font-bold">
+            Crie um cardápio digital com facilidade
+          </h1>
+          <p className="text-xl text-muted-foreground">
+            Gere, compartilhe e gerencie seu cardápio digital de forma simples e
+            rápida.
           </p>
         </div>
 
-        <Button>Criar conta gratuitamente</Button>
+        <Button>Começar gratuitamente</Button>
+      </div>
+
+      <div className="container mx-auto mt-12">
+        <div className="max-w-lg space-y-4">
+          <h3 className="text-4xl font-bold">
+            Facilidade ao criar um cardápio digital para seu restaurante.
+          </h3>
+          <p className="text-xl text-muted-foreground">
+            Com a cardapy, diversos restaurantes já mudaram suas formas de
+            atender clientes, com um cardápio digital, você pode criar,
+            compartilhar e gerenciar seu cardápio de forma simples e rápida.
+          </p>
+
+          <p>
+            Você pode começar com um plano gratuito,{" "}
+            <Link
+              className="underline text-primary underline-offset-1"
+              href="/sign-in"
+            >
+              comece aqui
+            </Link>
+          </p>
+        </div>
+      </div>
+
+      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 mt-12 gap-12">
+        <div className="relative h-[400px]">
+          <Image
+            objectFit="cover"
+            alt="Imagem de um cardápio"
+            fill
+            src="/shop.jpg"
+          />
+        </div>
+        <div className="space-y-4">
+          <h3 className="text-4xl font-bold">
+            Diversos restaurantes já estão utilizando a cardaPY
+          </h3>
+          <p>
+            A cardaPY já está sendo utilizada por diversos restaurantes e
+            estabelecimentos comerciais. Veja o que eles estão falando sobre a
+            cardaPY.
+          </p>
+
+          <Button>
+            <Link href="/sign-in">Começar agora</Link>
+          </Button>
+        </div>
+      </div>
+
+      <div className="container mx-auto mt-12">
+        <Accordion type="single" collapsible className="w-full">
+          <AccordionItem value="item-1">
+            <AccordionTrigger>Como funciona?</AccordionTrigger>
+            <AccordionContent>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptate doloribus repellendus repellat dolorem esse! Deserunt,
+              iure provident. Earum, tenetur molestias quod, corporis recusandae
+              beatae illum quae nihil numquam pariatur eos!
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-2">
+            <AccordionTrigger>Is it styled?</AccordionTrigger>
+            <AccordionContent>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptate doloribus repellendus repellat dolorem esse! Deserunt,
+              iure provident. Earum, tenetur molestias quod, corporis recusandae
+              beatae illum quae nihil numquam pariatur eos!
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="item-3">
+            <AccordionTrigger>Is it animated?</AccordionTrigger>
+            <AccordionContent>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Voluptate doloribus repellendus repellat dolorem esse! Deserunt,
+              iure provident. Earum, tenetur molestias quod, corporis recusandae
+              beatae illum quae nihil numquam pariatur eos!
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </div>
     </main>
   );

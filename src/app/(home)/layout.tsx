@@ -7,7 +7,7 @@ export default function LayoutHome({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="min-h-screen pb-24 flex flex-col">
       <Header />
       {children}
     </div>

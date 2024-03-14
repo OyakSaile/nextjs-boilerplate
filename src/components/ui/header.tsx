@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export function Header() {
   return (
-    <div className="border p-4 flex justify-between items-center">
+    <div className="border p-8 flex justify-between items-center">
       <h1 className="text-2xl font-semibold">
-        Anot<span className="text-red-400">Y</span>
+        Carda<span className="text-primary">PY</span>
       </h1>
 
       <div className="flex items-center gap-4">
