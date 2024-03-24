@@ -7,10 +7,10 @@ export default function LayoutDashboard({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen w-full flex flex-col">
       <Header />
-      <div className="grid grid-cols-2 h-full">
-        <Sidebar  />
+      <div className="grid w-full grid-cols-[200px_1fr] h-full">
+        <Sidebar />
         {children}
       </div>
     </div>

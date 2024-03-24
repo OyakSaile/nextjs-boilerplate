@@ -7,8 +7,9 @@ export const metadata: Metadata = {
 
 export default function Dashboard() {
   return (
-    <main className="h-full w-full flex items-center justify-center flex-col">
-      <h1>oi</h1>
+    <main className="h-full w-full flex flex-col p-8">
+      <h1 className="text-3xl font-bold">Dashboard</h1>
+      <p className="text-lg">Bem-vindo ao dashboard</p>
     </main>
   );
 }
