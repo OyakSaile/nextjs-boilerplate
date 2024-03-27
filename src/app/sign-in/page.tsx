@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Login - Cardapy",
   description: "App de anotações",
 };
+
 export default function SignInPage() {
   return (
     <div className="h-screen justify-center items-center grid grid-cols-1 lg:grid-cols-2 gap-12">
